@@ -1,0 +1,13 @@
+<%= form_for([current_user, @idea]) do |f| %>
+
+  <%= f.label :subject %>
+  <%= f.text_field :subject %><br>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %><br>
+
+  <%= f.label :category %>
+  <%= f.collection_select :category_id, @categories, :id, :genre %><br>
+
+  <%= f.submit %>
+<% end %>

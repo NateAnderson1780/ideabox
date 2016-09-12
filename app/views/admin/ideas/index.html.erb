@@ -1,0 +1,12 @@
+<%= link_to "Home", '/admin' %>
+
+<h1>Admin Ideas<h1>
+<h2>All Ideas</h2>
+<ul>
+  <% @ideas.each do |idea| %>
+    <li><%= link_to idea.subject, admin_idea_path(idea) %><br>
+    <%= link_to "Edit", edit_admin_idea_path(idea) %> |
+    <%= link_to "Delete", admin_idea_path(idea), method: :delete %></li>
+  <% end %>
+</ul>
+<%= link_to "Create New Idea", new_admin_idea_path %>

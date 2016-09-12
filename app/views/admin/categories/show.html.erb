@@ -1,0 +1,6 @@
+<h1><%= @category.genre %> category</h1>
+
+<h3>Category #<%= @category.id %></h3><br><br>
+
+<%= link_to "Edit", edit_admin_category_path(@category) %><br>
+<%= link_to "Delete", admin_category_path(@category), method: :delete %></li>

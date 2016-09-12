@@ -1,0 +1,12 @@
+<%= link_to "Home", '/admin' %>
+
+<h1>Admin Images</h1>
+
+<ul>
+  <% @images.each do |image| %>
+    <li>
+      <%= link_to image.name, admin_image_path(image) %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Create New Image", new_admin_image_path %>

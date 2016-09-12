@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160910203430) do
+ActiveRecord::Schema.define(version: 20160912004221) do
 
   create_table "categories", force: :cascade do |t|
     t.string "genre"
@@ -32,16 +32,24 @@ ActiveRecord::Schema.define(version: 20160910203430) do
     t.index ["user_id"], name: "index_ideas_on_user_id"
   end
 
+  create_table "image_ideas", force: :cascade do |t|
+    t.integer "image_id"
+    t.integer "idea_id"
+    t.index ["idea_id"], name: "index_image_ideas_on_idea_id"
+    t.index ["image_id"], name: "index_image_ideas_on_image_id"
+  end
+
   create_table "images", force: :cascade do |t|
     t.string "url"
+    t.string "name"
   end
 
   create_table "users", force: :cascade do |t|
     t.string  "name"
     t.string  "username"
     t.string  "password_confirmation"
-    t.integer "role"
     t.string  "password_digest"
+    t.integer "role",                  default: 0
   end
 
 end

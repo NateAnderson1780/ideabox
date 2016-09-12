@@ -1,0 +1,10 @@
+<h1><%= @idea.title %></h1>
+
+<ul>
+  <li>Subject - $<%= @idea.subject %></li>
+  <li>Description - <%= @idea.description %></li>
+  <li>Category - <%= @idea.category.genre %></li>
+  <li>Owner - <%= @idea.user.name %></li>
+  <%= link_to "Edit", edit_admin_idea_path(@idea) %> 
+  <%= link_to "Delete", admin_idea_path(@idea), method: :delete %></li>
+</ul>

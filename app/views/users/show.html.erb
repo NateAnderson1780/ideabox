@@ -1,0 +1,8 @@
+<h1><%= current_user.name %>'s IdeaBox page</h1>
+<%= link_to "View All Ideas", user_ideas_path(current_user.id) %>
+
+<ul>
+  <li>Name: <%= current_user.name %></li>
+  <li>Username: <%= current_user.username %></li>
+</ul>
+
