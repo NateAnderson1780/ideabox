@@ -26,7 +26,7 @@ class Admin::IdeasController < Admin::BaseController
   end
   
   def edit 
-    
+  
   end
   
   def update 
@@ -51,7 +51,7 @@ class Admin::IdeasController < Admin::BaseController
   end
   
   def set_users 
-    @user = User.all
+    @users = User.all
   end
   
   def set_idea 
